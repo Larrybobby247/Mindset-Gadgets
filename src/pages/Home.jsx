@@ -4,7 +4,6 @@ import Services from '../comonents/Services'
 import ProductsCat from '../comonents/ProductsCat'
 import Contact from '../comonents/Contact'
 import FeaturedProds from '../comonents/FeaturedProds'
-import TopProds from '../comonents/topProds'
 import TopProducts from '../comonents/TopProducts'
 
 const Home = () => {
