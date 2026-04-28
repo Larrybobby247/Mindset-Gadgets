@@ -1,30 +1,23 @@
-import { useEffect, useState } from "react";
-import Navbar from "./comonents/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Footer from "./comonents/Footer";
-import AOS from 'aos'
-import "aos/dist/aos.css"
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Categories from "./components/Categories";
+import Menu from "./components/Menu";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    })
-  },[])
+export default function App() {
   return (
-    <Router>
-      <div className="overflow-hidden">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-
-        <Footer />
-      </div>
-    </Router>
+    <div className="font-['Lato',sans-serif] scroll-smooth">
+      <Navbar />
+      <Hero />
+      <Categories />
+      <Menu />
+      <WhyChooseUs />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
-
-export default App;
