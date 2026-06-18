@@ -1,23 +1,32 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Menu from "./components/Menu";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import React from 'react';
+import Navbar from './sections/Navbar';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Services from './sections/Services';
+import Amenities from './sections/Amenities';
+import Gallery from './sections/Gallery';
+import Listings from './sections/Listings';
+import Testimonials from './sections/Testimonials';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
+import BackToTop from './components/BackToTop';
 
-export default function App() {
+function App() {
   return (
-    <div className="font-['Lato',sans-serif] scroll-smooth">
+    <div className="min-h-screen bg-secondary text-gray-800 antialiased">
       <Navbar />
       <Hero />
-      <Categories />
-      <Menu />
-      <WhyChooseUs />
+      <About />
+      <Services />
+      <Amenities />
+      <Gallery />
+      <Listings />
       <Testimonials />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   );
 }
+
+export default App;
