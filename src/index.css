@@ -7,8 +7,8 @@
 /* Theme tokens */
 @theme {
   /* Colors */
-  --color-primary: #0A192F;
-  --color-primary-light: #112240;
+  --color-primary: #3E2F2C;
+  --color-primary-light: #A89581;
   --color-primary-dark: #051020;
 
   --color-secondary: #F8F9FA;
@@ -56,7 +56,7 @@
 
 @layer components {
   .gradient-overlay {
-    background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(10, 25, 47, 0.75) 50%, rgba(10, 25, 47, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(168, 149, 129, 0.742) 0%, rgba(62, 47, 44, 0.765) 50%, rgba(10, 25, 47, 0.4) 100%);
   }
 
   .gold-gradient-text {
