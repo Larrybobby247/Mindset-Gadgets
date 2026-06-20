@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faWifi, faSwimmingPool, faDumbbell, faUtensils, faCalendarAlt, faConciergeBell, faTshirt, faParking } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faWifi, faSwimmingPool, faDumbbell, faUtensils, faCalendarAlt, faConciergeBell, faTshirt, faParking, faBolt } from '@fortawesome/free-solid-svg-icons';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Amenities = () => {
@@ -8,11 +8,8 @@ const Amenities = () => {
 
   const amenities = [
     { icon: faWifi, title: 'Free Wi-Fi', desc: 'High-speed fiber internet throughout the property', color: 'from-blue-500/20 to-blue-600/10' },
-    { icon: faSwimmingPool, title: 'Swimming Pool', desc: 'Rooftop infinity pool with panoramic city views', color: 'from-cyan-500/20 to-cyan-600/10' },
-    { icon: faDumbbell, title: 'Gym Center', desc: 'Fully equipped fitness center with modern equipment', color: 'from-red-500/20 to-red-600/10' },
-    { icon: faUtensils, title: 'Restaurant & Bar', desc: 'On-site dining with continental and local cuisine', color: 'from-orange-500/20 to-orange-600/10' },
+    { icon: faBolt, title: '24/7 Electricity', desc: 'Uninterrupted power supply with backup generators', color: 'from-yellow-500/20 to-yellow-600/10' },
     { icon: faCalendarAlt, title: 'Event Hall', desc: 'Elegant space for meetings, parties, and celebrations', color: 'from-purple-500/20 to-purple-600/10' },
-    { icon: faConciergeBell, title: '24/7 Concierge', desc: 'Round-the-clock guest assistance and services', color: 'from-accent/30 to-accent/10' },
     { icon: faTshirt, title: 'Laundry Service', desc: 'Professional washing, drying, and ironing services', color: 'from-green-500/20 to-green-600/10' },
     { icon: faParking, title: 'Secure Parking', desc: 'Covered parking with 24/7 surveillance and access control', color: 'from-gray-500/20 to-gray-600/10' },
   ];
