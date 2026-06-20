@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouseUser, faBolt, faShieldHalved, faUtensils, faWifi, faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebookF, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import logo from '../assets/logo.jpg'
 
 const Footer = () => {
   const quickLinks = [
@@ -10,7 +11,7 @@ const Footer = () => {
     { href: '#services', label: 'Services' },
     { href: '#amenities', label: 'Amenities' },
     { href: '#gallery', label: 'Gallery' },
-    { href: '#listings', label: 'Our Suites' },
+    { href: '#listings', label: 'Apartments Ensuites' },
     { href: '#testimonials', label: 'Reviews' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -38,8 +39,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
-                <span className="text-primary font-bold text-xl font-display">ASA</span>
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img src={logo} alt={logo} className='rounded-full'/>
               </div>
               <span className="text-white font-display font-semibold text-xl">Ace Service Apartments</span>
             </div>

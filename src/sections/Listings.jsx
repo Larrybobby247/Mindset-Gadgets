@@ -3,10 +3,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faSnowflake, faTv, faKitchenSet, faShirt, faCar, faBriefcase, faBolt, faHotTubPerson, faMountainCity, faGem, faKey } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import Img1 from '../assets/house1.jpg';
-import Img2 from '../assets/house8.jpg';
-import Img3 from '../assets/house10.jpg';
-import Img4 from '../assets/house11.jpg';
+import SuiteCard from './SuiteCard';
+
+import Img1a from '../assets/house1a.jpg';
+import Img1b from '../assets/house1b.jpg';
+import Img1c from '../assets/house1c.jpg';
+import Img1d from '../assets/house1d.jpg';
+import Img1e from '../assets/house1e.jpg';
+
+import Img2a from '../assets/house2a.jpg';
+import Img2b from '../assets/house2b.jpg';
+import Img2c from '../assets/house2c.jpg';
+import Img2d from '../assets/house2d.jpg';
+import Img2e from '../assets/house2e.jpg';
+
+import Img3a from '../assets/house3a.jpg';
+import Img3b from '../assets/house3f.jpg';
+import Img3c from '../assets/house3c.jpg';
+import Img3d from '../assets/house3e.jpg';
+import Img3e from '../assets/house3g.jpg';
+
+import Img4a from '../assets/house4c.jpg';
+import Img4b from '../assets/house4b.jpg';
+import Img4c from '../assets/house4f.jpg';
+import Img4d from '../assets/house4d.jpg';
+import Img4e from '../assets/house4e.jpg';
 
 
 const Listings = () => {
@@ -18,7 +39,8 @@ const Listings = () => {
       name: 'Serviced Apartment Durumi',
       type: 'Luxery 2-Bedroom Serviced Apartment',
       price: '₦100,000',
-      image: Img1,
+      available: true,
+      images: [Img1a, Img1e, Img1b, Img1c, Img1d],
       features: [
         { icon: faMountainCity, label: 'Private Balcony' },
         { icon: faSnowflake, label: 'Turbo AC' },
@@ -33,7 +55,8 @@ const Listings = () => {
       name: 'Serviced 2 Bedroom Apartment Durumi',
       type: 'Luxery 2-Bedroom Premium En-Suite',
       price: '₦100,000',
-      image: Img2,
+      available: true,
+      images: [Img2a, Img2e, Img2b, Img2c, Img2d],
       features: [
         { icon: faKitchenSet, label: 'Fully Equipped Kitchen' },
         { icon: faBolt, label: '24/7 Electricity' },
@@ -46,7 +69,8 @@ const Listings = () => {
       name: '2 Bedroom Airbnb Apartment Durumi',
       type: 'Airbnb Apartment in Durumi Abuja',
       price: '₦100,000',
-      image: Img3,
+      available: true,
+      images: [Img3a, Img3e, Img3b, Img3c, Img3d],
       features: [
         { icon: faBriefcase, label: 'Work-friendly Desk' },
         { icon: faBolt, label: '24/7 Electricity' },
@@ -60,7 +84,8 @@ const Listings = () => {
       name: '2 Bedroom En-Suite Apartment Durumi',
       type: 'Luxery 2-Bedroom Premium En-Suite',
       price: '₦100,000',
-      image: Img4,
+      available: true,
+      images: [Img4a, Img4e, Img4b, Img4c, Img4d],
       features: [
         { icon: faKitchenSet, label: 'Fully Equipped Kitchen' },
         { icon: faBolt, label: '24/7 Electricity' },
@@ -88,38 +113,7 @@ const Listings = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {suites.map((suite) => (
-            <div key={suite.id} className="section-fade bg-secondary rounded-2xl overflow-hidden shadow-lg card-hover group">
-              <div className="relative h-72 overflow-hidden">
-                <img src={suite.image} alt={suite.name} className="w-full h-full object-cover image-zoom" />
-                <div className="absolute top-4 right-4 bg-accent text-primary px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  {suite.price}/night
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary to-transparent h-32" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="font-display text-2xl font-bold">{suite.name}</h3>
-                  <p className="text-white/80 text-sm">{suite.type}</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {suite.features.map((feature, idx) => (
-                    <span key={idx} className="bg-white px-3 py-1.5 rounded-full text-sm text-primary border border-gray-200 flex items-center">
-                      <FontAwesomeIcon icon={feature.icon} className="mr-1.5 text-accent" />
-                      {feature.label}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={`https://wa.me/2348167696546?text=Hi, I'm interested in booking ${encodeURIComponent(suite.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-white w-full py-3 rounded-xl text-center font-semibold block inline-flex items-center justify-center space-x-2"
-                >
-                  <FontAwesomeIcon icon={faWhatsapp} />
-                  <span>Book This Suite</span>
-                </a>
-              </div>
-            </div>
+            <SuiteCard key={suite.id} suite={suite} />
           ))}
         </div>
       </div>
