@@ -10,6 +10,7 @@ import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import BackToTop from './components/BackToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Contact />
       <Footer />
       <BackToTop />
+      <WhatsAppButton />
     </div>
   );
 }
