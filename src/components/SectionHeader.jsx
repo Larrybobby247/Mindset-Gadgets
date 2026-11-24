@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SectionHeader = ({ icon, label, title, highlight, description, dark = false }) => {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-16 section-fade">
+    <div className="text-center max-w-3xl mx-auto mb-22 section-fade">
       <div className={`inline-flex items-center space-x-2 ${dark ? 'bg-white/10 border border-white/20' : 'bg-accent/10'} rounded-full px-4 py-2 mb-6`}>
         <FontAwesomeIcon icon={icon} className="text-accent" />
         <span className={`text-sm font-semibold ${dark ? 'text-white' : 'text-primary'}`}>{label}</span>
